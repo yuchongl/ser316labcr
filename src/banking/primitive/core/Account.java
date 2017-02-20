@@ -1,3 +1,11 @@
+/*
+  File:	Account.java
+  Author: Yuchong Li, Timothy Dirusso	
+  Date:	Feb. 20, 2017
+  
+  Description: Account class implementation
+*/
+
 package banking.primitive.core;
 
 public abstract class Account implements java.io.Serializable {
