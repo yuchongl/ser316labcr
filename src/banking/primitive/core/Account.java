@@ -17,11 +17,11 @@ public abstract class Account implements java.io.Serializable {
 
     protected float balance = 0.0F;
     protected String name;
-    private STATE state;
+    private STATE _state;
 
     protected Account(String n) {
         name = n;
-        state = STATE.OPEN;
+        _state = STATE.OPEN;
     }
 
     protected Account(String n, float b) {
@@ -49,11 +49,11 @@ public abstract class Account implements java.io.Serializable {
     public abstract String getType();
 
     protected final STATE getState() {
-        return state;
+        return _state;
     }
 
     protected final void setState(STATE s) {
-        state = s;
+        _state = s;
     }
     
     /**
