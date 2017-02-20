@@ -11,6 +11,8 @@ package banking.primitive.core;
 public class Savings extends Account {
 	private static final long serialVersionUID = 111L;
 	private int _numWithdraws = 0;
+	
+	private final int _maxNumWithdraw = 3;
 
 	public Savings(String name) {
 		super(name);
@@ -41,7 +43,7 @@ public class Savings extends Account {
 		if (getState() == STATE.OPEN && amount > 0.0f) {
 			balance = balance - amount;
 			_numWithdraws++;
-			if (_numWithdraws > 3){
+			if (_numWithdraws > _maxNumWithdraw){
 				balance = balance - 1.0f;
 			}
 			// KG BVA: should be < 0

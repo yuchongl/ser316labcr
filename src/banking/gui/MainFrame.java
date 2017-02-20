@@ -35,7 +35,16 @@ class MainFrame extends JFrame {
 	JButton			newAccountButton;
 	JButton			displayAccountsButton;
 	JButton			displayODAccountsButton;
-
+	
+	final String _msgAccountCreated = "Account created successfully";
+	final String _msgAccountNotCreated = "_msgAccountNotCreated!";
+	final String _msgAccountSaved = "Accounts saved";
+	final String _msgSaveAccountError = "Error saving accounts";
+	final String _msgDepositSuccessful = "Deposit successful";
+	final String _msgDepositUnseccessful = "Deposit unsuccessful";
+	final String _msgWithdralSuccessful = "Withdrawal successful";
+	final String _msgWithdrawalUnseccessful = "Withdrawal unsuccessful";
+	
 	public MainFrame(String propertyFile) throws IOException {
 
 		//** initialize myServer
@@ -134,7 +143,7 @@ class MainFrame extends JFrame {
 			JOptionPane.showMessageDialog(null, sb.toString());
 		}
 	}
-
+	
 	// Complete a handler for new account button
 	class NewAccountHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -143,9 +152,9 @@ class MainFrame extends JFrame {
 			String balance = balanceField.getText();
 
 			if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
-				JOptionPane.showMessageDialog(null, "Account created successfully");
+				JOptionPane.showMessageDialog(null, _msgAccountCreated);
 			} else {
-				JOptionPane.showMessageDialog(null, "Account not created!");
+				JOptionPane.showMessageDialog(null, _msgAccountNotCreated);
 			}
 		}
 	}
@@ -155,9 +164,9 @@ class MainFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			try {
 				myServer.saveAccounts();
-				JOptionPane.showMessageDialog(null, "Accounts saved");
+				JOptionPane.showMessageDialog(null, _msgAccountSaved);
 			} catch (IOException exc) {
-				JOptionPane.showMessageDialog(null, "Error saving accounts");
+				JOptionPane.showMessageDialog(null, _msgSaveAccountError);
 			}
 		}
 	}
@@ -169,12 +178,13 @@ class MainFrame extends JFrame {
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
 			if (acc != null && acc.deposit(Float.parseFloat(balance))) {
-				JOptionPane.showMessageDialog(null, "Deposit successful");
+				JOptionPane.showMessageDialog(null, _msgDepositSuccessful);
 			} else {
-				JOptionPane.showMessageDialog(null, "Deposit unsuccessful");
+				JOptionPane.showMessageDialog(null, _msgDepositUnseccessful);
 			}		
 		}
 	}
+	
 	// Complete a handler for deposit button
 	class WithdrawHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -182,9 +192,9 @@ class MainFrame extends JFrame {
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
 			if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
-				JOptionPane.showMessageDialog(null, "Withdrawal successful");
+				JOptionPane.showMessageDialog(null, _msgWithdralSuccessful);
 			} else {
-				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful");
+				JOptionPane.showMessageDialog(null, _msgWithdrawalUnseccessful);
 			}		
 		}
 	}
