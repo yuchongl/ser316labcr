@@ -1,3 +1,12 @@
+/*
+  File:	MainFrame.java
+  Author: Yuchong Li, Timothy Dirusso
+  Date:	Feb. 20, 2017
+  
+  Description: sets up the GUI components
+*/
+
+
 package banking.gui;
 
 import banking.primitive.core.Account;

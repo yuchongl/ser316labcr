@@ -1,3 +1,11 @@
+/*
+  File:	Savings.java
+  Author: Yuchong Li, Timothy Dirusso	
+  Date:	Feb. 20, 2017
+  
+  Description: Savings class implementation
+*/
+
 package banking.primitive.core;
 
 public class Savings extends Account {

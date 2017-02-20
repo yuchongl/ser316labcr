@@ -1,3 +1,11 @@
+/*
+  File:	Main.java
+  Author: Yuchong Li, Timothy Dirusso	
+  Date:	Feb. 20, 2017
+  
+  Description: Where the program starts
+*/
+
 package banking.gui;
 
 import javax.swing.JFrame;

@@ -1,3 +1,11 @@
+/*
+  File:	ServerSolution.java
+  Author: Yuchong Li, Timothy Dirusso	
+  Date:	Feb. 20, 2017
+  
+  Description: ServerSolution class implementation
+*/
+
 package banking.primitive.core;
 
 import java.util.ArrayList;
