@@ -12,6 +12,7 @@ public class Checking extends Account {
 
 	private static final long serialVersionUID = 11L;
 	private int _numWithdraws = 0;
+	private final int _maxNumWithdraw = 10;
 	
 	private Checking(String name) {
 		super(name);
@@ -51,7 +52,7 @@ public class Checking extends Account {
 			if (getState() == STATE.OPEN || (getState() == STATE.OVERDRAWN && balance > -100.0f)) {
 				balance = balance - amount;
 				_numWithdraws++;
-				if (_numWithdraws > 10){
+				if (_numWithdraws > _maxNumWithdraw){
 					balance = balance - 2.0f;
 				}
 				if (balance < 0.0f) {

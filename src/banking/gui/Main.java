@@ -22,6 +22,8 @@ final class Main {
 	private Main() {
 	}
 	
+	private static final String _usage = "Usage: java FormMain <property file>"; 
+	
 	/**
 	 * All methods should have a Javadoc according to STYLE.
 	 * @param args command-line arguments
@@ -30,7 +32,7 @@ final class Main {
 	public static void main(final String[] args) throws Exception {
 
 		if (args.length != 1) {
-			System.out.println("Usage: java FormMain <property file>");
+			System.out.println(_usage);
 			System.exit(1);
 		}
 
