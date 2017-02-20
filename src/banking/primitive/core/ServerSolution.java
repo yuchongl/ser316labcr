@@ -16,6 +16,11 @@ import java.io.*;
 
 import banking.primitive.core.Account.STATE;
 
+/**
+Class:	ServerSolution
+
+Description: implementes the AccountServer
+*/
 class ServerSolution implements AccountServer {
 
 	static String fileName = "accounts.ser";

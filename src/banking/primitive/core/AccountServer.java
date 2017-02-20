@@ -11,6 +11,11 @@ package banking.primitive.core;
 import java.io.IOException;
 import java.util.List;
 
+/**
+Class:	AccountServer
+
+Description: the interface for AccountServer
+*/
 public interface AccountServer {
 
 	/** 
