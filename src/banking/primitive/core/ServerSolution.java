@@ -111,6 +111,13 @@ class ServerSolution implements AccountServer {
 		return _newAccountFactory(type, name, balance);
 	}
 	
+	/**
+	  Method: closeAccount
+	  Inputs: account name to close
+	  Returns: true if successes, false if failed
+
+	  Description: close a given account
+	*/
 	public boolean closeAccount(String name) {
 		Account acc = accountMap.get(name);
 		if (acc == null) {
@@ -121,6 +128,13 @@ class ServerSolution implements AccountServer {
 	}
 
 	
+	/**
+	  Method: saveAccounts
+	  Inputs: 
+	  Returns: 
+
+	  Description: save accounts to a file
+	*/
 	public void saveAccounts() throws IOException {
 		ObjectOutputStream out = null; 
 		try {
