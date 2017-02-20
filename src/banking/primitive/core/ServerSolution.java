@@ -38,8 +38,8 @@ class ServerSolution implements AccountServer {
 			if (in != null) {
 				try {
 					in.close();
-				} catch (Throwable t) {
-					t.printStackTrace();
+				} catch (Throwable t) {{
+					t.printStackTrace();}
 				}
 			}
 		}
