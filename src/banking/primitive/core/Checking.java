@@ -11,7 +11,7 @@ package banking.primitive.core;
 public class Checking extends Account {
 
 	private static final long serialVersionUID = 11L;
-	private int numWithdraws = 0;
+	private int _numWithdraws = 0;
 	
 	private Checking(String name) {
 		super(name);
@@ -50,8 +50,8 @@ public class Checking extends Account {
 			// KG: incorrect, last balance check should be >=
 			if (getState() == STATE.OPEN || (getState() == STATE.OVERDRAWN && balance > -100.0f)) {
 				balance = balance - amount;
-				numWithdraws++;
-				if (numWithdraws > 10){
+				_numWithdraws++;
+				if (_numWithdraws > 10){
 					balance = balance - 2.0f;
 				}
 				if (balance < 0.0f) {
