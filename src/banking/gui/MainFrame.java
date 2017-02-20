@@ -126,6 +126,14 @@ class MainFrame extends JFrame {
 	}
 
 	class DisplayHandler implements ActionListener {
+		
+		/**
+		  Method: actionPerformed
+		  Inputs: ActionEvent
+		  Returns:
+
+		  Description: reacts to the action performed
+		*/
 		public void actionPerformed(ActionEvent e) {
 			List<Account> accounts = null;
 			if (e.getSource() == displayAccountsButton) {
@@ -146,6 +154,14 @@ class MainFrame extends JFrame {
 	
 	// Complete a handler for new account button
 	class NewAccountHandler implements ActionListener {
+		
+		/**
+		  Method: actionPerformed
+		  Inputs: ActionEvent
+		  Returns:
+
+		  Description: reacts to the action performed
+		*/
 		public void actionPerformed(ActionEvent e) {
 			String type = typeOptions.getSelectedItem().toString();
 			String name = nameField.getText();
@@ -161,6 +177,14 @@ class MainFrame extends JFrame {
 	
 	// Complete a handler for new account button
 	class SaveAccountsHandler implements ActionListener {
+		
+		/**
+		  Method: actionPerformed
+		  Inputs: ActionEvent
+		  Returns:
+
+		  Description: reacts to the action performed
+		*/
 		public void actionPerformed(ActionEvent e) {
 			try {
 				myServer.saveAccounts();
@@ -173,6 +197,14 @@ class MainFrame extends JFrame {
 
 	// Complete a handler for deposit button
 	class DepositHandler implements ActionListener {
+		
+		/**
+		  Method: actionPerformed
+		  Inputs: ActionEvent
+		  Returns:
+
+		  Description: reacts to the action performed
+		*/
 		public void actionPerformed(ActionEvent e) {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
@@ -187,6 +219,14 @@ class MainFrame extends JFrame {
 	
 	// Complete a handler for deposit button
 	class WithdrawHandler implements ActionListener {
+		
+		/**
+		  Method: actionPerformed
+		  Inputs: ActionEvent
+		  Returns:
+
+		  Description: reacts to the action performed
+		*/
 		public void actionPerformed(ActionEvent e) {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
@@ -203,6 +243,14 @@ class MainFrame extends JFrame {
 	//** (System.exit(1)) on windowClosing event
 
 	static class FrameHandler extends WindowAdapter {
+		
+		/**
+		  Method: windowClosing
+		  Inputs: closing event
+		  Returns:
+
+		  Description: reacts to the closing event
+		*/
 		public void windowClosing(WindowEvent e) {
 
 			System.exit(0);

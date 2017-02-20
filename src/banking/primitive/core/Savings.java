@@ -22,6 +22,14 @@ public class Savings extends Account {
 		super(name, balance);
 	}
 
+
+	/**
+	  Method: deposit
+	  Inputs: amount to deposit
+	  Returns: true if successes, false if failed
+
+	  Description: deposit into an account
+	*/
 	/**
 	 * A deposit comes with a fee of 50 cents per deposit
 	 */
@@ -35,6 +43,13 @@ public class Savings extends Account {
 		return false;
 	}
 
+	/**
+	  Method: withdraw
+	  Inputs: amount to withdraw
+	  Returns: true if successes, false if failed
+
+	  Description: withdraw from an account
+	*/
 	/**
 	 * A withdrawal. After 3 withdrawals a fee of $1 is added to each withdrawal.
 	 * An account whose balance dips below 0 is in an OVERDRAWN state

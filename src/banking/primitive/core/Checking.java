@@ -27,6 +27,13 @@ public class Checking extends Account {
 	}
 
 	/**
+	  Method: deposit
+	  Inputs: amount to deposit
+	  Returns: true if successes, false if failed
+
+	  Description: deposit into an account
+	*/
+	/**
 	 * A deposit may be made unless the Checking account is closed
 	 * @param float is the deposit amount
 	 */
@@ -42,6 +49,13 @@ public class Checking extends Account {
 		return false;
 	}
 
+	/**
+	  Method: withdraw
+	  Inputs: amount to withdraw
+	  Returns: true if successes, false if failed
+
+	  Description: withdraw from an account
+	*/
 	/**
 	 * Withdrawal. After 10 withdrawals a fee of $2 is charged per transaction You may 
 	 * continue to withdraw an overdrawn account until the balance is below -$100
